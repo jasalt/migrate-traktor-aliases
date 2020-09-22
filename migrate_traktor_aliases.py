@@ -10,13 +10,13 @@
 # fswatch -o ~/Desktop/test-dir | xargs -n1 -I{} ~/dev/migrate_traktor_aliases/migrate_traktor_aliases.py
 
 # TODO run on background on boot
-# TODO if exists on destination " alias" is appended, based on this info should just remove the source mp3 and log file that it's dupe, then remove the created alias too
+# TODO use fswatch passed path information with resolve_osx_alias to skip scanning
 # TODO check for duplicates even before going through the "New Tunes" folder
 
 import glob
 import os
 
-music_collection_dir = "/Users/jasalt/iCloud/Music"
+music_collection_dir = "/Users/jasalt/GDrive/Music"
 
 # Log changes on file
 import datetime
